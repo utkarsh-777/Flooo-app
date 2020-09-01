@@ -10,7 +10,7 @@ const authRoutes = require("./routes/auth")
 const postRoutes = require('./routes/post')
 const {MONGOURI} = require('./config/keys')
 
-mongoose.connect("mongodb+srv://User:database@cluster0.kpblk.mongodb.net/<dbname>?retryWrites=true&w=majority",{
+mongoose.connect(MONGOURI,{
     useNewUrlParser:true,
     useUnifiedTopology: true
 }).then(console.log('DB CONNECTED'))
