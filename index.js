@@ -23,14 +23,14 @@ app.use('/',authRoutes)
 app.use('/',postRoutes)
 
 if(process.env.NODE_ENV=='production'){
+    const cors = require('cors')
+    app.use(cors())
     app.use(express.static('postapp/build'))
 }
 
 app.listen(PORT,()=>{
     console.log(`App is listening at ${PORT}`)
     const path = require('path')
-    const cors = require('cors')
-    app.use(cors())
     app.get("*",(req,res)=>{
         res.sendFile(path.resolve(__dirname,'postapp','build','index.html'))
     })
