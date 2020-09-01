@@ -1,6 +1,6 @@
 var express = require('express')
 var app = express()
-var cors = require('cors')
+const cors = require('cors')
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 
@@ -23,8 +23,6 @@ app.use('/',authRoutes)
 app.use('/',postRoutes)
 
 if(process.env.NODE_ENV=='production'){
-    const cors = require('cors')
-    app.use(cors())
     app.use(express.static('postapp/build'))
 }
 
