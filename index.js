@@ -16,7 +16,9 @@ app.use(bodyParser.json())
 mongoose.connect(MONGOURI,{
     useNewUrlParser:true,
     useUnifiedTopology: true
-}).then(console.log('DB CONNECTED'))
+}).then(res=>{
+    console.log('DB CONNECTED')
+    })
 .catch(err=>console.log(err))
 
 app.use('/',authRoutes)
