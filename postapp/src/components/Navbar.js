@@ -1,8 +1,14 @@
 import React from 'react'
 import logo from './images/flooop.png'
+import {useHistory} from "react-router-dom"
 
 const Navbar = () => {
     const user =  JSON.parse(localStorage.getItem('user'))
+    const history = useHistory()
+    const logout = () => {
+        localStorage.clear()
+        return history.push('/login')
+    }
     return(
         <nav className="navbar navbar-expand-lg navbar-dark border-bottom">
             <a className="navbar-brand" href="/home"><img src={logo} alt='img' width='70px' height='70px' /></a>
@@ -17,6 +23,9 @@ const Navbar = () => {
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
                                 <a className="nav-link text-white" href="/home">Home <span className="sr-only">(current)</span></a>
+                            </li>
+                            <li className="nav-item">
+                                <button className='btn btn-danger btn-sm' onClick={logout} >Logout</button>
                             </li>
                         </ul>
                     </div>
