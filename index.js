@@ -10,14 +10,14 @@ const authRoutes = require("./routes/auth")
 const postRoutes = require('./routes/post')
 const {MONGOURI} = require('./config/keys')
 
+app.use(cors())
+app.use(bodyParser.json())
+
 mongoose.connect(MONGOURI,{
     useNewUrlParser:true,
     useUnifiedTopology: true
 }).then(console.log('DB CONNECTED'))
 .catch(err=>console.log(err))
-
-app.use(cors())
-app.use(bodyParser.json())
 
 app.use('/',authRoutes)
 app.use('/',postRoutes)
