@@ -26,13 +26,13 @@ app.use('/',postRoutes)
 
 if(process.env.NODE_ENV=='production'){
     app.use(express.static('postapp/build'))
-}
-
-app.listen(PORT,()=>{
-    console.log(`App is listening at ${PORT}`)
     const path = require('path')
     app.get("*",(req,res)=>{
         res.sendFile(path.resolve(__dirname,'postapp','build','index.html'))
     })
+}
+
+app.listen(PORT,()=>{
+    console.log(`App is listening at ${PORT}`)
 })
 
