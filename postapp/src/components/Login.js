@@ -9,7 +9,7 @@ const Login = () => {
     const history = useHistory()
 
     const handleSubmit = () => {
-        fetch('http://localhost:5000/login',{
+        fetch(`http://localhost:${process.env.PORT || '5000'}/login`,{
         method:'post',
         headers:{
             'Content-Type':'application/json'
