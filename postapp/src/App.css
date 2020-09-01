@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+    background-image: url(./components/images/wall.jpg);
+}
+
+#loading{
+    animation: spin 3s linear infinite!important;
+    color: aqua;
+}
+
+@keyframes spin {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+}
+
+h2{
+    font-family: 'Lobster', cursive;
+}
+
+h3{
+    font-family: 'Lobster', cursive;
+}
+h4{
+    font-family: 'Lobster', cursive;
+}
+
+h5{
+    font-family: 'Lobster', cursive;
+}
+
+p{
+    font-family: 'Lobster', cursive;
+}
+input{
+    font-family: 'Lobster', cursive!important;
+}
+
+nav{
+    font-family: 'Lobster', cursive;
+}
+
+.btn{
+    font-family: 'Lobster', cursive;
+}
