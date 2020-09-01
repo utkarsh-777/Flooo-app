@@ -17,8 +17,8 @@ const Flash = () => {
     },[history])
    
     return(
-        <div>
-            <h1 className='text-center'><img src={img1} style={{width:'100%'}} alt=".." /></h1>
+        <div className='container'>
+            <h1 className='text-center'><img src={img1} style={{width:'100%',height:'auto'}} alt=".." /></h1>
             <h2 className='text-white text-center'>Loading..<div id='loading' className='mt-2'> <FaGgCircle /></div></h2>
         </div>
     )
