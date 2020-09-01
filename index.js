@@ -25,6 +25,8 @@ app.use('/',authRoutes)
 app.use('/',postRoutes)
 
 if(process.env.NODE_ENV=='production'){
+    const cors = require('cors')
+    app.use(cors())
     app.use(express.static('postapp/build'))
     const path = require('path')
     app.get("*",(req,res)=>{
