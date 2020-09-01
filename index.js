@@ -4,7 +4,7 @@ const cors = require('cors')
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 
-const PORT = process.env.PORT || 5000
+const PORT =  5000
 
 const authRoutes = require("./routes/auth")
 const postRoutes = require('./routes/post')
